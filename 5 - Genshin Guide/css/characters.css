@@ -1,0 +1,353 @@
+/*código index.css */
+body {
+    overflow-y: scroll;
+    height: auto;
+    width: 100%;
+}
+
+header img {
+    vertical-align: middle;
+    width: 5%;
+    padding: 10px;
+}
+
+header h1 {
+    vertical-align: middle;
+    display: inline;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-image: url(../img/background4.png);
+    box-shadow: 0 3px 10px rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    padding: 0px 20px;
+}
+
+header ul a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header ul li {
+    color: white;
+    font-size: 25px;
+    display: inline;
+    margin: 20px;
+    padding: 10px 15px;
+    font-family: sans-serif;
+    border: 0px solid #FFFFFF;
+    border-radius: 16px;
+}
+
+header ul li:hover {
+    background: #FFFFFF;
+    color: #000000;
+    transition: 0.2s;
+    animation: fadeinanimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeinanimation {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header ul {
+    align-items: center;
+    display: inline;
+    vertical-align: middle;
+}
+/*fim index.css*/
+
+/* loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #208bf5;
+    transition-duration: 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #000000;
+    border-top-color: #4000ff;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(2turn);
+    }
+}
+
+body::after {
+    background-color: black;
+    transition: 3s;
+    animation: fadeinanimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+/* fim loader */
+
+.characters {
+    margin: auto;
+    gap: 50px;
+    display: flex;
+    background-image: url(../img/background4.png);
+}
+
+.characters-item {
+    margin:auto;
+    padding: 30px;
+    margin-top: 70px;
+    border-radius: 10px;
+    border-width: 10px;
+    margin-left: 50px;
+    text-align: center;
+    background-color: rgba(156, 0, 0, 0.582);
+}
+
+.characters-item2 {
+    color: rgb(133, 129, 129);
+    font-size: 50px;
+}
+
+.pyro {
+    margin:auto;
+    position:relative;
+    box-shadow: 0 3px 10px rgb(255, 0, 0);
+    text-align: center;
+    gap:20px;
+    display:flex;
+    background-image: url(../img/background4.png);
+}
+
+.pyro img {
+    width: 150px;
+    height: 150px;
+    gap:10px;
+    margin-top: 15px;
+}
+
+.pyro p {
+    margin-top: 30px;
+    font-size: 100px;
+}
+.box2{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/background4.png);
+    border-right: 40px black solid;
+}
+.weaponimage{
+    width: 100px;
+    height: 100px;
+    }
+    .characterimage{
+        padding: 10px;
+        width:200px;
+        height: 200px;
+    }
+    .estrelapyro5{
+       font-size: 100px;
+       background-image: url(../img/background4.png); 
+    }
+@media only screen and (max-width: 1850px) {
+    .characters-item{
+        padding: 30px;
+    }
+    .weaponimage{
+        width: 80px;
+        height: 80px;
+    }
+    .characterimage{
+        width: 150px;
+        height: 150px;
+    }
+    .characters-item2{
+        font-size: 40px;
+    }
+    .characters-item3{
+        font-size:25;
+    }
+  }
+  @media only screen and (max-width: 1632px) {
+    .characters-item{
+        padding: 30px;
+    }
+    .weaponimage{
+        width: 50px;
+        height: 50px;
+    }
+    .characterimage{
+        width: 100px;
+        height: 100px;
+    }
+    .characters-item2{
+        font-size:30px;
+    }
+    .characters-item3{
+        font-size: 20px;
+    }
+  }
+  .characters-item3{
+    color:rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 30px
+  }
+  @media only screen and (max-width: 1500px) {
+.characters{
+display:grid;
+grid-template-columns: auto auto auto;
+column-gap: 10px;
+} 
+.characters-item{
+    padding: 30px;
+}
+.weaponimage{
+    width: 80px;
+    height: 80px;
+}
+.characterimage{
+    width: 150px;
+    height: 150px;
+}
+.characters-item2{
+    font-size: 40px;
+}
+.characters-item3{
+    font-size:25;
+}
+}
+@media only screen and (max-width: 900px) {
+.characters{
+    grid-template-columns: auto auto;
+}
+}
+footer {
+    background-image: url(../img/background4.png);
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 250px;
+    margin: 40px;
+    text-align: center;
+    padding: 20px 100px;
+    border-right: 1px #FFFFFF solid;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer ul li a {
+    display: inline;
+    vertical-align: middle;
+    margin: 40px;
+    font-size: 22px;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 0px solid;
+    border-radius: 16px;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+footer ul li a:hover {
+    background: #FFFFFF;
+    color: #000000;
+    transition: 0.2s;
+    animation: fadeinanimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.banner {
+    background-image: url(../img/Mondstadt\ with\ Blur.jpg);
+    width: 100%;
+}
+
+.youtube {
+    margin: 80px 0px;
+    border-right: #FFFFFF 1px solid;
+    padding: 50px;
+}
+
+.banner ul li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h3 {
+    color: #FFFFFF;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 20px;
+}
+
+.banner p {
+    color: #FFFFFF;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+}
+
+.textobanner p {
+    margin: 50px 20px;
+}
+
+h4 {
+    color: #FFFFFF;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    border: 0px solid #17C7D8;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0px 20px;
+    display: inline-block;
+    background-image: url(../img/background4.png);
+    background-size: contain;
+}
+
+.textobanner a {
+    text-decoration: none;
+}
+
+h4:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.copyright {
+    color: #FFFFFF;
+}
